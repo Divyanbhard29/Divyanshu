@@ -1,0 +1,11 @@
+from pygoogling.googling import GoogleSearch   #module import
+import string
+
+key = input("Enter word to search: ")
+google_search = GoogleSearch(key)
+google_search.start_search(max_page=3)
+print(google_search.request_page) # will print the url as list of string
+google_search.more_search(4) # to search 4 extra pages
+print(google_search.search_result)# the result will be added to current result
+
+#search anything you will get sites links 
