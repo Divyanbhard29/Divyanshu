@@ -1,0 +1,26 @@
+from tkinter import *
+import time,datetime
+root = Tk()
+root.title("Power Of Python")
+root.geometry("900x900+150+50")   #dimension of window 
+root.configure(background="#057596")    #background colour for window
+root.state('zoomed')
+time1 = ''
+clock = Label(root, font=('times', 170, 'bold'), bg='pink')
+clock.pack(fill=BOTH, expand=1)
+def tick():
+    global time1
+    # get the current local time from the PC
+    time2 = time.strftime('%I:%M:%S:%p')
+    # if time string has changed, update it
+    if time2 != time1:
+        time1 = time2
+        clock.config(text=time2)
+    # calls itself every 200 milliseconds
+    # to update the time display as needed
+    # could use >200 ms, but display gets jerky
+    clock.after(200, tick)
+tick()
+s = datetime.datetime.now().strftime("%a-%d-%b-%y") 
+Label(root,text = s,font = ('times',150,'bold'),bg = "#25A1C0",width = 220,height = 0).pack(ipadx = 20,ipady = 30)   
+root.mainloop()
