@@ -1,0 +1,22 @@
+# how you divide array using numpy by int
+import numpy as np 
+b = [1.3,4.5,53.5,89.0,1.23]
+c = 10
+d = np.divide(b,c)
+print(d)
+####-------------------####
+
+#dictionary or similar hashtable
+dic = {'Name':'Divyanshu','Age':23,'Date':'1st feb'}
+print(dic['Name']
+
+''''' Update dictionary''''''''
+dic['Age']=20   #new age value
+print(dic['Age']
+
+
+''''''''Del dictionary'''''''
+del dic
+
+
+
